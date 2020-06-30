@@ -1,0 +1,12 @@
+<h1>All Recipes</h1>
+
+<%= form_with(url: "/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %> <br>
+
+
+<% @recipes.each do |recipe| %>
+<li><%= recipe.title %></li>
+<% end %>

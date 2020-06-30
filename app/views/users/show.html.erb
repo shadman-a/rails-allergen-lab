@@ -1,0 +1,6 @@
+<h1><%= @user.name  %></h1>
+<% @user.recipes.each do |recipe| %>
+<li><%= recipe.title %></li>
+<% end %>
+
+<%= button_to "Remove", user_path(@user),method: :delete %>
